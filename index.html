@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Lyubov — LOVE</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Personal website of Lyubov — photos, a bit about me, and social links.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0e0e12; --card:#15151c; --text:#e9e9ee; --muted:#a7a7b3;
+      --acc1:#ff6aa7; --acc2:#7d6bff; --ring:rgba(255,106,167,.35)
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:radial-gradient(1200px 1200px at 10% -10%,rgba(125,107,255,.25),transparent),
+                           radial-gradient(1000px 800px at 100% 0,rgba(255,106,167,.25),transparent),
+                           var(--bg); color:var(--text); font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1000px;margin:0 auto;padding:28px}
+    /* HERO */
+    .hero{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:center;margin-top:28px}
+    .ava{width:120px;height:120px;border-radius:50%;background:#222 center/cover no-repeat;
+         box-shadow:0 0 0 6px var(--card), 0 0 0 10px var(--ring)}
+    /* Replace with real profile photo */
+    .ava{background-image:url('https://avatars.githubusercontent.com/u/0?v=4');}
+    .title{font-size:32px;font-weight:800;letter-spacing:.3px}
+    .subtitle{color:var(--muted);margin-top:6px}
+    .badges{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
+    .badge{padding:8px 12px;border-radius:999px;background:linear-gradient(90deg,var(--acc1),var(--acc2));font-weight:600}
+    /* CARDS */
+    .grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:28px}
+    @media(min-width:720px){.grid{grid-template-columns:1.2fr .8fr}}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid #262635;
+          border-radius:18px;padding:20px}
+    h2{margin:0 0 10px 0;font-size:20px}
+    p{margin:8px 0;color:#d8d8e2;line-height:1.6}
+    .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .btn{padding:10px 14px;border-radius:12px;background:#1e1e29;border:1px solid #2a2a3b}
+    .btn:hover{transform:translateY(-1px)}
+    /* GALLERY */
+    .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .ph{aspect-ratio:1/1;border-radius:12px;background:#222 center/cover no-repeat}
+    /* FOOTER */
+    footer{opacity:.7;text-align:center;margin:24px 0 10px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="ava" title="Profile photo"></div>
+      <div>
+        <div class="title">Lyubov <span style="opacity:.7">/ LOVE</span></div>
+        <div class="subtitle">a small personal corner online — photos, mood and contacts</div>
+        <div class="badges">
+          <div class="badge">LOVE</div>
+          <div class="badge" style="background:linear-gradient(90deg,var(--acc2),var(--acc1))">CREATIVE</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="grid">
+      <article class="card">
+        <h2>About Me</h2>
+        <p>Hello! I'm Lyubov. I love warm tea, sunsets and cities by the water. I capture little moments on my phone, draw, and edit short videos.</p>
+        <p>Here you’ll find links to my socials and a few favorite shots. Drop by anytime ✨</p>
+        <div class="btns">
+          <!-- Replace with real links -->
+          <a class="btn" href="https://t.me/username" target="_blank" rel="noopener">Telegram</a>
+          <a class="btn" href="https://instagram.com/username" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn" href="mailto:hello@example.com">Email</a>
+        </div>
+      </article>
+
+      <aside class="card">
+        <h2>Now Playing</h2>
+        <p>A small playlist to brighten the day.</p>
+        <div style="position:relative;padding-top:56%;border-radius:12px;overflow:hidden;border:1px solid #2a2a3b;background:#111;margin-top:8px">
+          <iframe style="position:absolute;inset:0;width:100%;height:100%;border:0"
+                  src="https://www.youtube.com/embed/5qap5aO4i9A"
+                  title="Lofi"></iframe>
+        </div>
+      </aside>
+    </section>
+
+    <section class="card" style="margin-top:16px">
+      <h2>Gallery</h2>
+      <div class="gal">
+        <!-- Replace with real images -->
+        <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800');"></div>
+        <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=800');"></div>
+        <div class="ph" style="background-image:url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=800');"></div>
+      </div>
+    </section>
+
+    <footer>© <span id="y"></span> Lyubov · made with ❤ on GitHub Pages</footer>
+  </div>
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+</body>
+</html>
+
